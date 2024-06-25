@@ -1,21 +1,12 @@
 const express = require('express');
+const {gethomePage ,vipPro } = require('../controllers/homeController')
 const router = express.Router();
-router.get('/',(req,res)=>{
-    res.send('hello world ! ')
 
 
-})
+router.get('/', gethomePage)
 
-router.get('/abc',(req,res)=>{
-    res.send('hello world ! abc ')
-
-
-})
-
-router.get('/88vipPro',(req,res)=>{
-   res.render('sample.ejs')
+router.get('/88vipPro',vipPro)
 
 
-})
 
 module.exports = router
