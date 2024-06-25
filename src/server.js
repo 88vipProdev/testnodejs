@@ -1,6 +1,11 @@
-const express = require('express')
+const express = require('express');
+const path = require('path');
 const app = express()
 const port = 8081
+
+// config template engine
+app.set('views',path.join(__dirname,'views')) ;
+app.set('view engine', 'ejs')
 
 app.get('/',(req,res)=>{
     res.send('hello world ! ')
@@ -15,7 +20,7 @@ app.get('/abc',(req,res)=>{
 })
 
 app.get('/88vipPro',(req,res)=>{
-    res.send('<h1>lap trinh voi 88vippro</h1> ')
+   res.render('sample.ejs')
 
 
 })
