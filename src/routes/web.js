@@ -1,4 +1,4 @@
-const express = require('express');
+import express from "express"
 const {gethomePage ,vipPro } = require('../controllers/homeController')
 const router = express.Router();
 
